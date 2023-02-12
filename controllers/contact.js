@@ -2,7 +2,6 @@ const nodemailer = require("nodemailer");
 require("dotenv").config();
 
 const sendEmail = async (req, res) => {
-  res.setHeader("Access-Control-Allow-Origin", "*");
   const { name, email, subject, message } = req.body;
 
   if (!name || !email || !subject || !message) {
